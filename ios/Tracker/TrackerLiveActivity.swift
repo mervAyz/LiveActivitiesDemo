@@ -84,11 +84,11 @@ struct TrackerLiveActivity: Widget {
         .tint(.green)
       }
       .padding()
-      .activityBackgroundTint(Color.black.opacity(0.8))
+      .activityBackgroundTint(Color.white.opacity(0.2))
       .activitySystemActionForegroundColor(Color.white)
       
     } dynamicIsland: { context in
-      DynamicIsland {
+      DynamicIsland { 
         // MARK: - Expanded UI (Ada genişlediğinde)
         // Burası kullanıcı adaya uzun bastığında açılan yerdir.
         
@@ -122,9 +122,15 @@ struct TrackerLiveActivity: Widget {
         
       } compactLeading: {
         // MARK: - Compact Leading (Kapalı Ada Sol)
-        Image(systemName: "bolt.fill")
+        HStack {
+          Image(systemName: "bolt.fill")
           .foregroundStyle(.yellow)
           .padding(.leading, 4)
+          Text("Charging")
+            .font(.caption)
+            .bold()
+            .foregroundStyle(.white)
+        }
         
       } compactTrailing: {
         // MARK: - Compact Trailing (Kapalı Ada Sağ)
