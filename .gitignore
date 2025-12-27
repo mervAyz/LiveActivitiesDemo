@@ -2,6 +2,17 @@
 #
 .DS_Store
 
+# macOS
+#
+.DS_Store
+
+# User settings
+.vscode/
+
+# Code Injection
+#
+iOSInjectionProject/
+
 # Xcode
 #
 build/
